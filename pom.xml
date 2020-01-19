@@ -57,6 +57,15 @@
     		<artifactId>spring-boot-starter-actuator</artifactId>
     	</dependency>
 				
+		<!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit5-api -->
+		<dependency>
+		    <groupId>com.tngtech.archunit</groupId>
+		    <artifactId>archunit-junit5</artifactId>
+		    <version>0.13.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+				
 	</dependencies>
 
 	<build>
