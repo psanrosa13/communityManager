@@ -78,13 +78,11 @@
 			<plugin>
 			 <groupId>com.microsoft.azure</groupId>
 			 <artifactId>azure-webapp-maven-plugin</artifactId>
-			 <version>1.8.0</version>
+			 <version>1.9.0</version>
 			 <configuration>
-		       <schemaVersion>V2</schemaVersion>
-		       <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
-		       <appName>gs-spring-boot-1559091271202</appName>
+		       <resourceGroup>maquinas-manager</resourceGroup>
+		       <appName>communitymanagerapp</appName>
 		       <region>westeurope</region>
-		       <pricingTier>P1V2</pricingTier>
 		       <runtime>
 		         <os>linux</os>
 		         <javaVersion>jre8</javaVersion>
