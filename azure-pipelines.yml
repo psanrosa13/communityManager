@@ -21,13 +21,3 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Visual Studio Enterprise (30c5c3f3-d2c7-4dc0-92ce-79b9ed1d5a14)'
-    appType: 'webAppLinux'
-    appName: 'communitymanagerapp'
-    deployToSlotOrASE: true
-    slotName: 'production'
-    package: '$(System.DefaultWorkingDirectory)/**/*.jar'
-    runtimeStack: 'TOMCAT|9.0-jre8'
-    startUpCommand: 'java -jar $(appName).jar'
