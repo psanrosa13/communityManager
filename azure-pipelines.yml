@@ -20,3 +20,14 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise (30c5c3f3-d2c7-4dc0-92ce-79b9ed1d5a14)'
+    appType: 'webAppLinux'
+    WebAppName: 'communitymanagerapp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/target/*.jar'
+    RuntimeStack: 'TOMCAT|9.0-jre8'
+    StartupCommand: 'java -jar communityManager.jar'
